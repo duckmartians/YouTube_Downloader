@@ -1,5 +1,7 @@
 **Download: https://github.com/duckmartians/YouTube_Downloader/releases**
 
+<img width="830" height="563" alt="image" src="https://github.com/user-attachments/assets/e48f45aa-a4e0-48b5-bdab-6d651b6b5b93" />
+
 ### **Hướng dẫn sử dụng YouTube Downloader v3.0**
 
 Chào mừng bạn đến với YouTube Downloader! Đây là một công cụ mạnh mẽ giúp bạn dễ dàng tải video, âm thanh, và nhiều hơn nữa từ YouTube. Dưới đây là hướng dẫn chi tiết về các tính năng của công cụ.
@@ -63,6 +65,8 @@ Bạn có thể thay đổi ngôn ngữ giao diện bất cứ lúc nào bằng 
 **------------------------------------------------**
 
 ### **User Guide for YouTube Downloader v3.0**
+
+<img width="828" height="579" alt="image" src="https://github.com/user-attachments/assets/b4262c48-0f71-4fed-86ce-5b8cb7525de2" />
 
 Welcome to YouTube Downloader! This is a powerful tool designed to help you easily download videos, audio, and more from YouTube. Below is a detailed guide to the tool's features.
 
