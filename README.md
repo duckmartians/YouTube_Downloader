@@ -1,4 +1,4 @@
-**Download: https://github.com/duckmartians/YouTube_Downloader/releases**
+**Download: [YouTube Downloader v4.0.zip](https://github.com/duckmartians/YouTube_Downloader/releases/download/v4.0/YouTube_Downloader_v4.0.zip)** / **[YouTube Downloader v4.0.exe](https://github.com/duckmartians/YouTube_Downloader/releases/download/v4.0/YouTube_Downloader_v4.0.exe)**
 
 ***
 
