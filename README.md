@@ -1,8 +1,8 @@
-**Download: [YouTube Downloader v4.0.zip](https://github.com/duckmartians/YouTube_Downloader/releases/download/v4.0/YouTube_Downloader_v4.0.zip)** / **[YouTube Downloader v4.0.exe](https://github.com/duckmartians/YouTube_Downloader/releases/download/v4.0/YouTube_Downloader_v4.0.exe)**
+**Download: [YouTube Downloader v4.1.zip](https://github.com/duckmartians/YouTube_Downloader/releases/download/v4.1/YouTube_Downloader_v4.1.zip)** / **[YouTube Downloader v4.1.exe](https://github.com/duckmartians/YouTube_Downloader/releases/download/v4.1/YouTube_Downloader_v4.1.exe)**
 
 ***
 
-## Hướng dẫn sử dụng YouTube Downloader v4.0
+## Hướng dẫn sử dụng YouTube Downloader v4.1
 
 ### **1. Giới thiệu chung**
 
@@ -23,7 +23,7 @@ Giao diện được chia thành các khu vực chức năng rõ ràng:
 
 #### **Bước 1: Thêm Link vào Hàng đợi**
 
-Đây là tính năng cốt lõi của phiên bản 4.0. Bạn có thể thêm nhiều loại link khác nhau vào để xử lý cùng lúc.
+Đây là tính năng cốt lõi của phiên bản 4.1. Bạn có thể thêm nhiều loại link khác nhau vào để xử lý cùng lúc.
 
 1.  **Nhập URL:** Dán một link video, playlist, hoặc kênh YouTube vào ô **"Link Kênh/Playlist/Video"**.
 2.  **Thêm vào hàng đợi:**
@@ -89,7 +89,7 @@ Khu vực "Tùy chọn video" cho phép bạn tinh chỉnh file đầu ra.
 
 ***
 
-## YouTube Downloader v4.0 User Guide
+## YouTube Downloader v4.1 User Guide
 
 ### **1. General Introduction**
 
@@ -110,7 +110,7 @@ The interface is divided into clear functional areas:
 
 #### **Step 1: Add Links to the Queue**
 
-This is the core feature of version 4.0. You can add various link types to be processed in a single batch.
+This is the core feature of version 4.1. You can add various link types to be processed in a single batch.
 
 1.  **Enter URL:** Paste a YouTube video, playlist, or channel link into the **"Channel/Playlist/Video Link:"** field.
 2.  **Add to Queue:**
