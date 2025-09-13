@@ -6,7 +6,7 @@
 
 ### **1. Giới thiệu chung**
 
-YouTube Downloader v4.0 là một công cụ mạnh mẽ giúp bạn tải video, playlist, và toàn bộ các video từ kênh YouTube. Phiên bản này mang đến nhiều cải tiến đáng giá, nổi bật nhất là khả năng quản lý hàng đợi (queue), xem trước và chọn lọc video từ playlist/kênh, cùng với giao diện được tối ưu hóa.
+YouTube Downloader là một công cụ mạnh mẽ giúp bạn tải video, playlist, và toàn bộ các video từ kênh YouTube. Phiên bản này mang đến nhiều cải tiến đáng giá, nổi bật nhất là khả năng quản lý hàng đợi (queue), xem trước và chọn lọc video từ playlist/kênh, cùng với giao diện được tối ưu hóa.
 
 ### **2. Giao diện chính**
 
@@ -93,7 +93,7 @@ Khu vực "Tùy chọn video" cho phép bạn tinh chỉnh file đầu ra.
 
 ### **1. General Introduction**
 
-YouTube Downloader v4.0 is a powerful tool for downloading videos, playlists, and entire video collections from YouTube channels. This version introduces significant improvements, most notably queue management, the ability to preview and select videos from playlists/channels, and a more streamlined user interface.
+YouTube Downloader is a powerful tool for downloading videos, playlists, and entire video collections from YouTube channels. This version introduces significant improvements, most notably queue management, the ability to preview and select videos from playlists/channels, and a more streamlined user interface.
 
 ### **2. Main Interface**
 
