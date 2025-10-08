@@ -1,0 +1,37 @@
+===================================================
+YOUTUBE DOWNLOADER USAGE GUIDE
+===================================================
+
+Hello! To use this YouTube Downloader tool, please follow the simple steps below.
+
+---------------------------------------------------
+STEP 1: INSTALLATION (DO THIS ONLY ONCE)
+---------------------------------------------------
+
+- The first time you use the tool, you need to run the `setup.bat` file.
+- How to do it: Double-click on the `setup.bat` file.
+- A black command-line window will appear and automatically install the necessary libraries.
+- When the window shows a message like "Installation complete" and "Press any key to continue...", simply press any key to close it.
+
+---------------------------------------------------
+STEP 2: RUNNING THE APPLICATION
+---------------------------------------------------
+
+- To open the tool, run the `run.vbs` file.
+- How to do it: Double-click on the `run.vbs` file.
+- The main interface of the program will appear immediately without the black command-line window, providing a cleaner experience.
+
+---------------------------------------------------
+STEP 3: HOW TO UPDATE THE LIBRARY
+---------------------------------------------------
+
+- Occasionally, YouTube may make changes that prevent the tool from downloading videos. When this happens, you need to update the library from within the app.
+- How to do it:
+  1. Open the tool by running `run.vbs`.
+  2. In the application's interface, find and click the "Update Library" button.
+  3. The update process will run and display its progress in the "Activity Log" panel.
+  4. Once the update is complete, you can continue using the tool.
+
+- It is recommended to update whenever you encounter a download error or once every 1-2 weeks to ensure the tool remains stable.
+
+Enjoy using the tool!

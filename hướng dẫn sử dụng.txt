@@ -1,0 +1,37 @@
+===================================================
+HƯỚNG DẪN SỬ DỤNG YOUTUBE DOWNLOADER
+===================================================
+
+Chào bạn, vui lòng làm theo các bước dưới đây để sử dụng tool một cách tốt nhất.
+
+---------------------------------------------------
+BƯỚC 1: CÀI ĐẶT (CHỈ LÀM 1 LẦN DUY NHẤT)
+---------------------------------------------------
+
+- Lần đầu tiên sử dụng, bạn cần chạy file `setup.bat`.
+- Cách làm: Nhấp đúp chuột (double-click) vào file `setup.bat`.
+- Một cửa sổ dòng lệnh màu đen sẽ hiện ra và tự động cài đặt các thư viện cần thiết.
+- Khi cửa sổ báo "Installation complete" hoặc tương tự và có chữ "Press any key to continue...", bạn chỉ cần bấm một phím bất kỳ để đóng lại.
+
+---------------------------------------------------
+BƯỚC 2: CHẠY ỨNG DỤNG
+---------------------------------------------------
+
+- Để mở tool lên sử dụng, bạn hãy chạy file `run.vbs`.
+- Cách làm: Nhấp đúp chuột vào file `run.vbs`.
+- Giao diện chính của chương trình sẽ hiện lên ngay lập tức mà không có cửa sổ dòng lệnh màu đen đi kèm.
+
+---------------------------------------------------
+BƯỚC 3: CÁCH CẬP NHẬT THƯ VIỆN
+---------------------------------------------------
+
+- Thỉnh thoảng, YouTube có thể thay đổi khiến tool không tải được video. Lúc này, bạn cần cập nhật thư viện ngay bên trong ứng dụng.
+- Cách làm:
+  1. Mở tool lên bằng file `run.vbs`.
+  2. Trên giao diện tool, tìm và nhấn vào nút "Cập nhật thư viện".
+  3. Quá trình cập nhật sẽ chạy và hiển thị trong khung "Nhật ký hoạt động".
+  4. Sau khi cập nhật xong, bạn có thể tiếp tục sử dụng.
+
+- Bạn nên cập nhật khi gặp lỗi tải video, hoặc khoảng 1-2 tuần một lần để đảm bảo tool luôn hoạt động ổn định.
+
+Chúc bạn sử dụng tool vui vẻ!
