@@ -1,105 +1,75 @@
-# YouTube Downloader v4.5 (by Duck Martians)
+# 📖 Hướng dẫn sử dụng YouTube Downloader
 
-A desktop application with a graphical user interface (GUI) built with Python and Tkinter for downloading YouTube videos, playlists, and entire channels. This application leverages the powerful `yt-dlp` library, is multi-threaded to prevent UI freezing, and provides a wide range of flexible download options.
+Chào mừng bạn đến với **YouTube Downloader**! Công cụ được thiết kế để giúp bạn lưu lại những nội dung yêu thích từ YouTube một cách đơn giản và nhanh chóng nhất.
 
-## ✨ Key Features
 
-- **Versatile Downloads**: Supports downloading single videos, playlists, and all videos from a YouTube channel.
-- **Playlist Preview**: Preview the list of videos in a playlist or channel and select specific videos to download.
-- **Quality Selection**: Choose video quality from 720p HD up to 4K, or select "Best Available" to automatically get the highest resolution.
-- **Audio-Only Mode**: Option to download only the audio track and automatically convert it to MP3 format.
-- **Side File Downloads**: Easily download video thumbnails (PNG) and subtitles (SRT).
-- **Multi-language UI**: Supports both English and Vietnamese, switchable directly within the app.
-- **Download Control**: Pause, resume, and stop the download process at any time.
-- **Integrated Updater**: Includes a built-in "Update Library" button to upgrade `yt-dlp` to the latest version directly from the app, helping to fix download issues caused by YouTube's changes.
-- **Multi-threading**: The download process runs in a separate thread to ensure the user interface remains responsive and never freezes.
 
-## 🛠️ System Requirements
+---
 
-- **OS**: Windows 7/8/10/11.
-- **Python**: Version 3.6 or higher.
-- **ffmpeg**: Included in the `app` directory for processing and merging video/audio files.
+## 🚀 Bắt đầu
 
-## 🚀 Installation and Usage
+Để khởi động, bạn chỉ cần nhấp đúp vào tệp **`YouTube_Downloader.exe`**. Ứng dụng sẽ chạy ngay lập tức mà không cần bất kỳ bước cài đặt phức tạp nào.
 
-Follow these simple steps to get started.
+---
 
-**Step 1: Installation (Do this only once)**
+## ✨ Giao diện chính
 
-- On your first use, you need to run the `setup.bat` file.
-- This will create a virtual environment (`venv`) and install all the required Python libraries (`yt-dlp`).
+Giao diện được chia thành 4 khu vực chính để bạn dễ dàng thao tác:
 
-**Step 2: Running the Application**
 
-- After the installation is complete, double-click on the `run.vbs` file to launch the application.
-- This script runs the program silently without opening a black command-line (CMD) window.
 
-**Step 3: How to Use**
+1.  **Thiết lập tải xuống**: Nơi bạn cung cấp link video/playlist và chọn thư mục lưu trữ.
+2.  **Tùy chọn**: Các tinh chỉnh nâng cao như chất lượng video, chỉ tải âm thanh, v.v.
+3.  **Nhật ký hoạt động**: Theo dõi chi tiết toàn bộ quá trình tải xuống theo thời gian thực.
+4.  **Điều khiển**: Các nút bấm để bắt đầu hoặc dừng tác vụ.
 
-1.  **Paste Link**: Paste a YouTube video, playlist, or channel URL into the input box.
-2.  **Add to Queue**: Click the "Add" button to add the URL to the queue below. You can add multiple URLs.
-3.  **Choose Save Directory**: Click "Browse..." to select where you want to save the downloaded files.
-4.  **Customize Options**: Select the video quality, download limit (for channels/playlists), and other options (thumbnail, subtitles, audio-only).
-5.  **Start**: Click the "Start" button to begin the download process.
+---
 
-## 🤝 Contributing
+## 📝 Các bước tải video
 
-Contributions are welcome! If you have ideas for improving the application, feel free to open an "Issue" or submit a "Pull Request".
+Chỉ với vài bước đơn giản, bạn đã có thể tải về nội dung mình muốn.
 
-## 📄 License
+### **Bước 1: Thêm Link vào Hàng đợi**
 
-This project is licensed under the [MIT License](LICENSE).
+* **Dán link** của video, playlist, hoặc toàn bộ kênh YouTube vào ô nhập liệu.
+* Nhấn nút **`➕ Thêm`** để đưa link vào hàng đợi bên dưới.
+* *Mẹo*: Bạn cũng có thể **kéo và thả link** trực tiếp vào ô "Hàng đợi"!
 
-***
+### **Bước 2: Chọn Nơi lưu tệp**
 
-# YouTube Downloader v4.5 (by Duck Martians)
+* Ứng dụng sẽ tự động chọn thư mục `youtube_downloads` (nằm cùng nơi với file `.exe`) làm nơi lưu mặc định.
+* Để thay đổi, hãy nhấn nút **`📂 Chọn...`** và điều hướng đến thư mục bạn mong muốn.
 
-Một ứng dụng máy tính với giao diện đồ họa (GUI) được xây dựng bằng Python và Tkinter để tải video, playlist, và toàn bộ kênh từ YouTube. Ứng dụng này sử dụng thư viện `yt-dlp` mạnh mẽ, hỗ trợ đa luồng để không làm treo giao diện, và cung cấp nhiều tùy chọn tải xuống linh hoạt.
+### **Bước 3: Tinh chỉnh Tùy chọn (Nếu cần)**
 
-## ✨ Tính Năng Nổi Bật
+Bạn có thể tùy chỉnh thêm để có được kết quả ưng ý nhất:
+* **Chất lượng**: Chọn độ phân giải video (1080p, 720p,...).
+* **Số lượng**: Giới hạn số video cần tải từ một playlist/kênh (để `0` để tải tất cả).
+* **Các nút chức năng**:
+    * **🎵 Chỉ tải Audio (MP3)**: Chuyển đổi và chỉ lưu lại file âm thanh.
+    * **🖼️ Tải ảnh Thumbnail**: Tải về ảnh bìa chất lượng cao của video.
+    * **📝 Tải Phụ đề**: Lưu lại tệp phụ đề `.srt` (nếu có).
 
-- **Tải đa dạng**: Hỗ trợ tải video đơn lẻ, playlist, và toàn bộ video từ một kênh YouTube.
-- **Xem trước Playlist**: Xem danh sách video trong một playlist hoặc kênh và chọn video cụ thể để tải.
-- **Tùy chọn chất lượng**: Lựa chọn chất lượng video từ 720p HD đến 4K, hoặc chọn "Tốt nhất" để tự động lấy chất lượng cao nhất.
-- **Chỉ tải Âm thanh**: Tùy chọn chỉ tải về file âm thanh và tự động chuyển đổi sang định dạng MP3.
-- **Tải file phụ**: Dễ dàng tải ảnh thumbnail (PNG) và phụ đề (SRT) của video.
-- **Giao diện đa ngôn ngữ**: Hỗ trợ Tiếng Việt và Tiếng Anh, dễ dàng chuyển đổi trực tiếp trên ứng dụng.
-- **Điều khiển quá trình tải**: Tạm dừng (Pause), tiếp tục (Resume), và kết thúc (Stop) quá trình tải bất kỳ lúc nào.
-- **Cập nhật tích hợp**: Tích hợp nút "Cập nhật thư viện" để nâng cấp `yt-dlp` lên phiên bản mới nhất ngay trong ứng dụng, giúp sửa lỗi tải video do YouTube thay đổi.
-- **Đa luồng**: Quá trình tải xuống chạy trên một luồng riêng biệt để đảm bảo giao diện người dùng luôn mượt mà và không bị treo.
+### **Bước 4: Bắt đầu Tải!**
 
-## 🛠️ Yêu Cầu Hệ Thống
+* Nhấn nút màu xanh lá **`🚀 Bắt đầu Tải Xuống`**.
+* Hãy thư giãn và để ứng dụng thực hiện phần còn lại!
 
-- **Hệ điều hành**: Windows 7/8/10/11.
-- **Python**: Phiên bản 3.6 trở lên.
-- **ffmpeg**: Đã được đính kèm trong thư mục `app` để xử lý và ghép file video/âm thanh.
+---
 
-## 🚀 Cài Đặt và Sử Dụng
+## 💡 Mẹo và Tính năng Nâng cao
 
-Làm theo các bước đơn giản dưới đây để bắt đầu.
+* **Xem trước Playlist**: Đối với một playlist dài, hãy nhấn nút **`🔍 Xem trước...`**. Một cửa sổ sẽ hiện ra liệt kê tất cả video, cho phép bạn chọn chính xác những video cần tải.
+* **Tăng tốc độ tải**: Tăng số lượng **"Tải đồng thời"** để tải nhiều video cùng một lúc. (Lưu ý: nên đặt ở mức 3-4 để tránh bị YouTube giới hạn tốc độ).
+* **Dừng tác vụ**: Nếu bạn đổi ý, chỉ cần nhấn nút màu đỏ **`⏹️ Dừng Lại`** để hủy quá trình đang chạy.
 
-**Bước 1: Cài đặt (Chỉ làm 1 lần duy nhất)**
+---
 
-- Lần đầu tiên sử dụng, bạn cần chạy file `setup.bat`.
-- Thao tác này sẽ tạo một môi trường ảo (`venv`) và cài đặt tất cả các thư viện Python cần thiết (`yt-dlp`).
+## ❓ Xử lý sự cố
 
-**Bước 2: Chạy Ứng Dụng**
+* **Lỗi khi tải?**
+    * Đầu tiên, hãy kiểm tra lại kết nối Internet của bạn.
+    * Thử lại với một link video khác để chắc chắn link cũ không bị giới hạn.
+    * Giảm số "Tải đồng thời" xuống còn `1`.
 
-- Sau khi cài đặt xong, hãy nhấp đúp chuột vào file `run.vbs` để khởi động ứng dụng.
-- File này sẽ chạy chương trình mà không hiện cửa sổ dòng lệnh (CMD) màu đen.
-
-**Bước 3: Sử dụng**
-
-1.  **Dán Link**: Dán link video, playlist, hoặc kênh YouTube vào ô nhập liệu.
-2.  **Thêm vào hàng đợi**: Nhấn nút "Thêm" để đưa link vào hàng đợi bên dưới. Bạn có thể thêm nhiều link.
-3.  **Chọn thư mục lưu**: Nhấn "Chọn..." để chọn nơi bạn muốn lưu file tải về.
-4.  **Tùy chỉnh**: Chọn chất lượng video, giới hạn số lượng (nếu là kênh/playlist), và các tùy chọn tải kèm (thumbnail, phụ đề, audio).
-5.  **Bắt đầu**: Nhấn nút "Bắt đầu" để tiến hành tải xuống.
-
-## 🤝 Đóng Góp
-
-Mọi ý kiến đóng góp đều được hoan nghênh! Nếu bạn có ý tưởng để cải thiện ứng dụng, vui lòng tạo một "Issue" hoặc một "Pull Request".
-
-## 📄 Giấy Phép
-
-Dự án này được cấp phép theo [Giấy phép MIT](LICENSE).
+Chúc bạn có những trải nghiệm tuyệt vời cùng **YouTube Downloader**!
