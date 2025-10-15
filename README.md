@@ -8,7 +8,7 @@ Chào mừng bạn đến với **YouTube Downloader**! Công cụ được thi�
 
 ## 🚀 Bắt đầu
 
-Để khởi động, bạn chỉ cần nhấp đúp vào tệp **`YouTube_Downloader.exe`**. Ứng dụng sẽ chạy ngay lập tức mà không cần bất kỳ bước cài đặt phức tạp nào.
+Để khởi động, bạn chỉ cần nhấp đúp vào tệp [**`YouTube_Downloader.exe`**](https://github.com/duckmartians/YouTube_Downloader/releases/tag/v15.10). Ứng dụng sẽ chạy ngay lập tức mà không cần bất kỳ bước cài đặt phức tạp nào.
 
 ---
 
