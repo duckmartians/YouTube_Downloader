@@ -1,6 +1,6 @@
 # 📖 Hướng dẫn sử dụng YouTube Downloader
 
-Chào mừng bạn đến với **YouTube Downloader**! Công cụ được thiết kế để giúp bạn lưu lại những nội dung yêu thích từ YouTube một cách đơn giản và nhanh chóng nhất.
+Chào mừng bạn đến với [**`YouTube Downloader`**](https://github.com/duckmartians/YouTube_Downloader/releases/tag/v15.10)! Công cụ được thiết kế để giúp bạn lưu lại những nội dung yêu thích từ YouTube một cách đơn giản và nhanh chóng nhất.
 
 
 
