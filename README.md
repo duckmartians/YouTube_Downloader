@@ -15,8 +15,7 @@ Chào mừng bạn đến với [**`YouTube Downloader`**](https://github.com/du
 ## ✨ Giao diện chính
 
 Giao diện được chia thành 4 khu vực chính để bạn dễ dàng thao tác:
-
-
+<img width="1626" height="832" alt="image" src="https://github.com/user-attachments/assets/6e2a4470-66bc-4e2e-a52f-887a9f4fa8ac" />
 
 1.  **Thiết lập tải xuống**: Nơi bạn cung cấp link video/playlist và chọn thư mục lưu trữ.
 2.  **Tùy chọn**: Các tinh chỉnh nâng cao như chất lượng video, chỉ tải âm thanh, v.v.
