@@ -6,6 +6,7 @@ Chào mừng bạn đến với [**`YouTube Downloader`**](https://github.com/du
 ## **I. Giới thiệu Giao diện Chính**
 
 Giao diện của chương trình được chia thành 4 khu vực chính:
+<img width="1735" height="1064" alt="image" src="https://github.com/user-attachments/assets/abae0452-2180-48ea-ac88-f50c908f423d" />
 
 1. **Thiết lập Tải xuống (Download Setup):** Khu vực để bạn thêm link, quản lý hàng đợi và chọn nơi lưu file.
 
