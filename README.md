@@ -1,74 +1,60 @@
-# 📖 Hướng dẫn sử dụng YouTube Downloader
+# YouTube Downloader User Guide
 
-Chào mừng bạn đến với [**`YouTube Downloader`**](https://github.com/duckmartians/YouTube_Downloader/releases/tag/v15.10)! Công cụ được thiết kế để giúp bạn lưu lại những nội dung yêu thích từ YouTube một cách đơn giản và nhanh chóng nhất.
+Welcome to [**`YouTube Downloader`**](https://github.com/duckmartians/YouTube_Downloader/releases/), a powerful and easy-to-use tool that helps you quickly and flexibly download videos, audio, playlists, or entire channels from YouTube.
 
+## **I. Main Interface Overview**
 
+The program's interface is divided into 4 main sections:
 
----
+1.  **Download Setup:** This is where you add links, manage the download queue, and choose where to save your files.
+2.  **Options:** Here, you can customize the quality, format, and other content to be downloaded.
+3.  **Activity Log:** Displays notifications about the download process, allowing you to monitor the program's activities.
+4.  **Controls:** Contains the main buttons to start or stop the download process.
 
-## 🚀 Bắt đầu
+## **II. Step-by-Step Download Guide**
 
-Để khởi động, bạn chỉ cần nhấp đúp vào tệp [**`YouTube Downloader`**](https://github.com/duckmartians/YouTube_Downloader/releases/tag/v15.10). Ứng dụng sẽ chạy ngay lập tức mà không cần bất kỳ bước cài đặt phức tạp nào.
+Follow these simple steps to download the content you want:
 
----
+#### **Step 1: Add a Video/Playlist/Channel Link**
+* Copy the link of the YouTube video, playlist, or channel you want to download.
+* Paste the link into the **"Channel/Playlist/Video Link"** field.
+* Click the **"➕ Add"** button. The link will be added to the **"Queue"** table below.
+> **Tip:** You can add multiple links to the queue before starting the download.
 
-## ✨ Giao diện chính
+#### **Step 2: Preview (Optional for Playlists/Channels)**
+* If you paste a link to a playlist or channel, you can click the **"🔍 Preview..."** button.
+* A new window will appear, listing all the videos in that playlist/channel.
+* You can select one or more specific videos from the list to add to the queue, instead of downloading the entire collection.
 
-Giao diện được chia thành 4 khu vực chính để bạn dễ dàng thao tác:
-<img width="1626" height="832" alt="image" src="https://github.com/user-attachments/assets/6e2a4470-66bc-4e2e-a52f-887a9f4fa8ac" />
+#### **Step 3: Select a Save Directory**
+* In the **"Save directory"** line, click the **"📂 Browse..."** button.
+* A window will open, allowing you to browse and select a folder on your computer where you want to save the downloaded files.
 
-1.  **Thiết lập tải xuống**: Nơi bạn cung cấp link video/playlist và chọn thư mục lưu trữ.
-2.  **Tùy chọn**: Các tinh chỉnh nâng cao như chất lượng video, chỉ tải âm thanh, v.v.
-3.  **Nhật ký hoạt động**: Theo dõi chi tiết toàn bộ quá trình tải xuống theo thời gian thực.
-4.  **Điều khiển**: Các nút bấm để bắt đầu hoặc dừng tác vụ.
+#### **Step 4: Customize Options (If Needed)**
+* **Quality:** Select the desired video resolution (e.g., 1080p, 720p).
+* **Limit:** If it's a playlist/channel, you can limit the number of videos to download (set to `0` to download all).
+* **Video Type:** Choose between "Regular Videos" and "Shorts".
+* **Concurrent downloads:** Select the number of videos to download simultaneously (this can speed up the process).
+* **Other Options:**
+  * **🎵 Audio Only:** Downloads only the audio file (MP3).
+  * **⏩ Skip Video & Audio:** Downloads only auxiliary content like thumbnails or subtitles.
+  * **🖼️ Download Thumbnail:** Downloads the video's thumbnail image (in .jpg format).
+  * **📝 Download Subtitles:** Downloads the subtitle file (if available).
 
----
+#### **Step 5: Start Downloading**
+* Once everything is set up, click the **"🚀 Start Download"** button in the **Controls** section.
+* The download process will begin. You can monitor the progress of each video in the "Progress" column and see detailed messages in the "Activity Log".
 
-## 📝 Các bước tải video
+#### **Step 6: Stop Downloading**
+* If you want to stop the process, click the **"⏹️ Stop"** button.
 
-Chỉ với vài bước đơn giản, bạn đã có thể tải về nội dung mình muốn.
+## **III. Advanced Features**
 
-### **Bước 1: Thêm Link vào Hàng đợi**
+In the top-right corner of the window, you'll find advanced function buttons:
+* **Language Buttons (EN, VI, ZH, ...):** Click to change the interface language instantly.
+* **Cookie Settings:** Useful for downloading videos that require a login, are private, or are age-restricted. You can use a browser extension to get the cookie file and load it into the program.
+* **Proxy Settings:** Use this when you want to download videos that are blocked in your geographical region.
+* **Update Library:** Click this button to have the program automatically download the latest version of the `yt-dlp` tool. This ensures better compatibility with YouTube's changes.
+* **Buy me a coffee ☕:** If you find this tool helpful, please support the author to provide more motivation for development!
 
-* **Dán link** của video, playlist, hoặc toàn bộ kênh YouTube vào ô nhập liệu.
-* Nhấn nút **`➕ Thêm`** để đưa link vào hàng đợi bên dưới.
-* *Mẹo*: Bạn cũng có thể **kéo và thả link** trực tiếp vào ô "Hàng đợi"!
-
-### **Bước 2: Chọn Nơi lưu tệp**
-
-* Ứng dụng sẽ tự động chọn thư mục `youtube_downloads` (nằm cùng nơi với file `.exe`) làm nơi lưu mặc định.
-* Để thay đổi, hãy nhấn nút **`📂 Chọn...`** và điều hướng đến thư mục bạn mong muốn.
-
-### **Bước 3: Tinh chỉnh Tùy chọn (Nếu cần)**
-
-Bạn có thể tùy chỉnh thêm để có được kết quả ưng ý nhất:
-* **Chất lượng**: Chọn độ phân giải video (1080p, 720p,...).
-* **Số lượng**: Giới hạn số video cần tải từ một playlist/kênh (để `0` để tải tất cả).
-* **Các nút chức năng**:
-    * **🎵 Chỉ tải Audio (MP3)**: Chuyển đổi và chỉ lưu lại file âm thanh.
-    * **🖼️ Tải ảnh Thumbnail**: Tải về ảnh bìa chất lượng cao của video.
-    * **📝 Tải Phụ đề**: Lưu lại tệp phụ đề `.srt` (nếu có).
-
-### **Bước 4: Bắt đầu Tải!**
-
-* Nhấn nút màu xanh lá **`🚀 Bắt đầu Tải Xuống`**.
-* Hãy thư giãn và để ứng dụng thực hiện phần còn lại!
-
----
-
-## 💡 Mẹo và Tính năng Nâng cao
-
-* **Xem trước Playlist**: Đối với một playlist dài, hãy nhấn nút **`🔍 Xem trước...`**. Một cửa sổ sẽ hiện ra liệt kê tất cả video, cho phép bạn chọn chính xác những video cần tải.
-* **Tăng tốc độ tải**: Tăng số lượng **"Tải đồng thời"** để tải nhiều video cùng một lúc. (Lưu ý: nên đặt ở mức 3-4 để tránh bị YouTube giới hạn tốc độ).
-* **Dừng tác vụ**: Nếu bạn đổi ý, chỉ cần nhấn nút màu đỏ **`⏹️ Dừng Lại`** để hủy quá trình đang chạy.
-
----
-
-## ❓ Xử lý sự cố
-
-* **Lỗi khi tải?**
-    * Đầu tiên, hãy kiểm tra lại kết nối Internet của bạn.
-    * Thử lại với một link video khác để chắc chắn link cũ không bị giới hạn.
-    * Giảm số "Tải đồng thời" xuống còn `1`.
-
-Chúc bạn có những trải nghiệm tuyệt vời cùng **YouTube Downloader**!
+Enjoy using the tool!
