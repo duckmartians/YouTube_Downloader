@@ -6,6 +6,7 @@
 ## **I. 主界面概览**
 
 程序界面分为 4 个主要区域：
+<img width="1813" height="1064" alt="image" src="https://github.com/user-attachments/assets/d6bfdea1-9e21-4a47-854e-fe9b39d78d63" />
 
 1. **下载设置 (Download Setup):** 在此区域添加链接、管理下载队列和选择文件保存位置。
 2. **选项 (Options):** 在此自定义下载内容的质量、格式和其他相关选项。
