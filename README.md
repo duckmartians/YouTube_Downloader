@@ -6,6 +6,7 @@ Welcome to [**`YouTube Downloader`**](https://github.com/duckmartians/YouTube_Do
 ## **I. Main Interface Overview**
 
 The program's interface is divided into 4 main sections:
+<img width="1740" height="1064" alt="image" src="https://github.com/user-attachments/assets/d268e850-2c70-4d83-bc42-d6fe75ea4a9d" />
 
 1.  **Download Setup:** This is where you add links, manage the download queue, and choose where to save your files.
 2.  **Options:** Here, you can customize the quality, format, and other content to be downloaded.
