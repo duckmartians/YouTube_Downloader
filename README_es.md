@@ -6,6 +6,7 @@ Bienvenido a [**`YouTube Downloader`**](https://github.com/duckmartians/YouTube_
 ## **I. Descripción General de la Interfaz Principal**
 
 La interfaz del programa se divide en 4 secciones principales:
+<img width="1813" height="1064" alt="image" src="https://github.com/user-attachments/assets/1a1003cf-ad1a-4d4e-ab44-e16b0e52cb67" />
 
 1.  **Configuración de Descarga (Download Setup):** Aquí es donde añades enlaces, gestionas la cola de descargas y eliges dónde guardar tus archivos.
 2.  **Opciones (Options):** Aquí puedes personalizar la calidad, el formato y otro contenido que se descargará.
