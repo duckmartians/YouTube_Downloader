@@ -1,4 +1,5 @@
 # دليل مستخدم YouTube Downloader
+[![Tiếng Việt](https://img.shields.io/badge/Tiếng%20Việt-green)](README_vi.md) [![English](https://img.shields.io/badge/English-blue)](README.md) [![中文](https://img.shields.io/badge/中文-red)](README_zh.md) [![Español](https://img.shields.io/badge/Español-orange)](README_es.md) [![العربية](https://img.shields.io/badge/العربية-grey)](README_ar.md) [![Русский](https://img.shields.io/badge/Русский-yellow)](README_ru.md)
 
 مرحبًا بك في [**`YouTube Downloader`**](https://github.com/duckmartians/YouTube_Downloader/releases/)، أداة قوية وسهلة الاستخدام تساعدك على تنزيل مقاطع الفيديو أو الصوت أو قوائم التشغيل أو قنوات كاملة من يوتيوب بسرعة ومرونة.
 
