@@ -1,93 +1,239 @@
-# Hướng dẫn sử dụng YouTube Downloader
-[![Tiếng Việt](https://img.shields.io/badge/Tiếng%20Việt-green)](README_vi.md) [![English](https://img.shields.io/badge/English-blue)](README.md) [![中文](https://img.shields.io/badge/中文-red)](README_zh.md) [![Español](https://img.shields.io/badge/Español-orange)](README_es.md) [![العربية](https://img.shields.io/badge/العربية-grey)](README_ar.md) [![Русский](https://img.shields.io/badge/Русский-yellow)](README_ru.md)
+# YouTube Downloader Pro
 
-[![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-%F0%9F%92%BB-blue?style=for-the-badge)](https://github.com/duckmartians/YouTube_Downloader/releases/latest)
+**[English](README.md) · [Tiếng Việt](README_vi.md) · [中文](README_zh.md) · [Español](README_es.md) · [العربية](README_ar.md) · [Русский](README_ru.md)**
 
-Chào mừng bạn đến với [**`YouTube Downloader`**](https://github.com/duckmartians/YouTube_Downloader/releases/), một công cụ mạnh mẽ và dễ sử dụng giúp bạn tải video, audio, playlist, hoặc toàn bộ kênh từ YouTube một cách nhanh chóng và linh hoạt.
+Ứng dụng desktop thân thiện để tải video YouTube, playlist, kênh và Shorts — kèm tách nhạc, ảnh thumbnail, phụ đề và tải song song nhiều video. Đã tích hợp sẵn `ffmpeg` và JavaScript runtime, **bạn không cần cài thêm gì cả**.
 
-## **I. Giới thiệu Giao diện Chính**
+---
 
-Giao diện của chương trình được chia thành 4 khu vực chính:
-<img width="1202" height="732" alt="image" src="https://github.com/user-attachments/assets/a3e0f463-ceb7-415c-9868-199d24931d14" />
+## Tính năng nổi bật
 
-1. **Thiết lập Tải xuống (Download Setup):** Khu vực để bạn thêm link, quản lý hàng đợi và chọn nơi lưu file.
+- Tải video lẻ, cả playlist, cả kênh, hoặc bộ Shorts của 1 kênh.
+- Lưu thành **video MP4** (Tốt nhất / 1080p / 720p / 480p) hoặc **audio MP3** (192 kbps).
+- Tuỳ chọn lưu kèm **ảnh thumbnail (JPG)** và **phụ đề (SRT)**.
+- Tải đồng thời tối đa **10 video một lúc**.
+- **Xem trước playlist** để chọn đúng video cần tải.
+- **Thử lại video lỗi** chỉ với 1 cú click.
+- **Xuất danh sách hàng đợi** hoặc **chỉ video lỗi** ra file CSV.
+- Hỗ trợ **Cookie** (paste từ extension trình duyệt, hoặc chọn file).
+- Hỗ trợ **Proxy** (HTTP / HTTPS / SOCKS4 / SOCKS5, kèm tài khoản nếu cần).
+- Tự động bỏ qua những video đã tải trước đó.
+- Hỗ trợ **6 ngôn ngữ**: English, Tiếng Việt, 中文, Español, العربية, Русский.
+- **`yt-dlp` tự cập nhật** mỗi 24 giờ để theo kịp thay đổi từ YouTube.
 
-2. **Tùy chọn (Options):** Nơi bạn tùy chỉnh chất lượng, định dạng và các nội dung tải về kèm theo.
+---
 
-3. **Nhật ký Hoạt động (Activity Log):** Hiển thị các thông báo về tiến trình tải xuống, giúp bạn theo dõi hoạt động của chương trình.
+## Bắt đầu nhanh
 
-4. **Điều khiển (Controls):** Chứa các nút bấm chính để bắt đầu hoặc dừng quá trình tải.
+1. Chạy file `YouTubeDownloader.exe`.
+2. Dán link YouTube vào ô **Link**, bấm **Enter** (hoặc nút **Thêm**).
+3. (Tuỳ chọn) Chỉnh chất lượng, định dạng hoặc các tùy chọn phụ ở thẻ **Tùy chọn**.
+4. Bấm **Bắt đầu Tải Xuống**.
 
-## **II. Hướng dẫn Tải xuống (Từng bước)**
+Xong! File sẽ được lưu vào **Thư mục lưu** ghi ở thẻ **Thiết lập** (mặc định là folder `youtube_downloads/` cạnh app).
 
-Thực hiện theo các bước đơn giản sau để tải nội dung bạn muốn:
+---
 
-#### **Bước 1: Thêm Link Video/Playlist/Kênh**
+## Tổng quan giao diện
 
-* Sao chép (Copy) link của video, playlist hoặc kênh YouTube bạn muốn tải.
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│  EN  VI  中文  ES  AR  RU      [Cập nhật] [Cookie] [Proxy] [♥]          │  ← Thanh trên cùng
+├──────────────────────────────────┬──────────────────────────────────────┤
+│  THIẾT LẬP                       │  HÀNG ĐỢI    [Xuất] [Lỗi] [Xoá hết]  │
+│  Link: [______________] Thêm 🔍  │  ┌────────────────────────────────┐ │
+│  Lưu:  [______________] 📂        │  │ # │ Tiêu đề │ Trạng │ Tiến độ│ │
+│                                  │  │ 1 │ ...     │ ...   │ ...    │ │
+│  TÙY CHỌN                        │  │ 2 │ ...     │ ...   │ ...    │ │
+│  Chất lượng: [Tốt nhất ▾]        │  └────────────────────────────────┘ │
+│  Loại: [Video thường ▾] Số lượng │                                      │
+│  [Media] [Audio] [Thumb] [Sub]   │  NHẬT KÝ                             │
+│                                  │  [09:00:01] ...                      │
+│  ĐIỀU KHIỂN                      │  [09:00:02] ...                      │
+│  Sẵn sàng                        │                                      │
+│  ████████████░░░░░░░░░ 60%       │                                      │
+│  [Bắt đầu] [Dừng] [Thử lại lỗi]  │                                      │
+└──────────────────────────────────┴──────────────────────────────────────┘
+```
 
-* Dán (Paste) link vào ô **"Link Kênh/Playlist/Video"**.
+Cửa sổ chia thành **2 cột chính**: **cột trái** dùng để thiết lập, chọn tùy chọn và điều khiển; **cột phải** hiển thị hàng đợi và nhật ký hoạt động.
 
-* Nhấn nút **"➕ Thêm"**. Link sẽ được thêm vào bảng **"Hàng đợi"** bên dưới.
+---
 
-> **Mẹo:** Bạn có thể thêm nhiều link vào hàng đợi trước khi bắt đầu tải.
+## Hướng dẫn chi tiết
 
-#### **Bước 2: Xem trước (Tùy chọn cho Playlist/Kênh)**
+### 1. Thêm video vào hàng đợi
 
-* Nếu bạn dán link của một playlist hoặc kênh, bạn có thể nhấn nút **"🔍 Xem trước..."**.
+Có 4 cách thêm video:
 
-* Một cửa sổ mới sẽ hiện ra, liệt kê tất cả các video có trong playlist/kênh đó.
+- Dán link **video lẻ** (`https://www.youtube.com/watch?v=...`) rồi bấm **Enter** hoặc **Thêm**.
+- Dán link **playlist** (`...?list=...`) — app sẽ tự mở rộng thành các video riêng lẻ.
+- Dán link **kênh** (`youtube.com/@tenkenh`) — app sẽ lấy cả video thường **và** Shorts của kênh đó.
+- Bấm **Xem trước** (🔍) để mở dialog liệt kê toàn bộ video trong playlist/kênh; tích chọn video bạn muốn rồi bấm OK.
 
-* Bạn có thể chọn một hoặc nhiều video cụ thể từ danh sách để thêm vào hàng đợi, thay vì phải tải toàn bộ.
+Sau khi thêm, các video sẽ hiện trong bảng **Hàng đợi** bên phải với trạng thái `⏳ Chờ`.
 
-#### **Bước 3: Chọn Thư mục Lưu**
+> **Mẹo — playlist và kênh được cache lại.** Khi bạn dán link kênh, app tải danh sách video về 1 lần và lưu vào ổ. Khi đó bạn có thể đổi **Số lượng** hoặc chuyển giữa **Video thường / Shorts** thì hàng đợi sẽ tự cập nhật ngay mà không cần fetch lại.
 
-* Tại dòng **"Thư mục lưu"**, nhấn nút **"📂 Chọn..."**.
+### 2. Chọn nội dung muốn tải (thẻ Tùy chọn)
 
-* Một cửa sổ sẽ hiện ra để bạn tìm và chọn thư mục trên máy tính nơi bạn muốn lưu các file tải về.
+| Nút bật/tắt | Tác dụng |
+|---|---|
+| **Tải Media** (mặc định ON) | Lưu video dạng MP4 |
+| **Chỉ Audio** | Chỉ lưu phần tiếng dạng MP3, 192 kbps |
+| **Thumbnail** | Lưu ảnh bìa dạng JPG |
+| **Phụ đề** | Lưu phụ đề dạng SRT (tự chọn ngôn ngữ phù hợp nhất) |
 
-#### **Bước 4: Tùy chỉnh các Tùy chọn (Nếu cần)**
+**Tải Media** và **Chỉ Audio** loại trừ lẫn nhau — bật cái này thì cái kia tự tắt.
 
-* **Chất lượng:** Chọn độ phân giải video mong muốn (ví dụ: 1080p, 720p).
+Nếu bạn **tắt cả 2**, app sẽ bỏ qua tải video/audio nhưng vẫn lưu Thumbnail/Phụ đề nếu được bật. Hữu ích khi bạn chỉ cần ảnh bìa hoặc phụ đề.
 
-* **Số lượng:** Nếu là playlist/kênh, bạn có thể giới hạn số lượng video cần tải (để `0` nếu muốn tải tất cả).
+| Tùy chọn khác | Phạm vi | Ghi chú |
+|---|---|---|
+| **Chất lượng** | Tốt nhất / 1080p / 720p / 480p | Bị khoá khi ở chế độ Audio |
+| **Số lượng** | 0–9999 | `0` = không giới hạn. Chỉ áp dụng cho playlist/kênh. |
+| **Loại Video** | Video thường / Shorts | Chỉ áp dụng cho playlist/kênh. |
+| **Tải đồng thời** | 1–10 | Số video tải cùng lúc |
 
-* **Loại Video:** Chọn giữa "Video thường" và "Shorts".
+### 3. Bắt đầu và theo dõi
 
-* **Tải đồng thời:** Chọn số lượng video được phép tải cùng một lúc (giúp tăng tốc độ).
+Bấm **Bắt đầu Tải Xuống**. Thanh trạng thái sẽ hiển thị tổng tiến độ; mỗi dòng trong hàng đợi có thanh tiến độ riêng. Bấm **Dừng** bất cứ lúc nào — sẽ có hộp thoại xác nhận, sau đó toàn bộ tác vụ sẽ huỷ.
 
-* **Các tùy chọn khác:**
+Khi xong hết, trạng thái chuyển thành **Hoàn tất**.
 
-  * **🎵 Chỉ tải Audio:** Chỉ tải về file âm thanh (MP3).
+### 4. Thử lại video lỗi
 
-  * **⏩ Không tải Video & Audio:** Chỉ tải các nội dung phụ như thumbnail, phụ đề.
+Nếu vài dòng hiện `❌ Lỗi`, bấm **Thử lại lỗi**. Hàng đợi sẽ được làm mới chỉ chứa các video lỗi và bắt đầu tải lại tự động. Các video đã thành công sẽ không bị tải lại.
 
-  * **🖼️ Tải ảnh Thumbnail:** Tải ảnh đại diện của video (định dạng .jpg).
+### 5. Xuất hàng đợi hoặc danh sách lỗi
 
-  * **📝 Tải Phụ đề:** Tải file phụ đề (nếu có).
+- **Xuất**: lưu toàn bộ hàng đợi (Tiêu đề, URL, Trạng thái) ra file `.csv`.
+- **Xuất Lỗi**: chỉ lưu các dòng lỗi. Hữu ích để chia sẻ danh sách lỗi cho người khác, hoặc lưu lại để sau retry.
 
-#### **Bước 5: Bắt đầu Tải xuống**
+Cả 2 file dùng UTF-8 BOM nên mở bằng Excel sẽ hiện đúng tiếng Việt.
 
-* Sau khi đã thiết lập xong, nhấn nút **"🚀 Bắt đầu Tải Xuống"** ở khu vực **Điều khiển**.
+### 6. Xem trước playlist/kênh trước khi thêm
 
-* Quá trình tải xuống sẽ bắt đầu. Bạn có thể theo dõi tiến trình của từng video trong cột "Tiến trình" và các thông báo chi tiết trong "Nhật ký Hoạt động".
+1. Dán link playlist hoặc kênh vào ô **Link**.
+2. Bấm **Xem trước**. Một cửa sổ mới sẽ liệt kê toàn bộ video.
+3. Tích chọn các video cần tải.
+4. Bấm **OK**. Chúng sẽ được thêm vào hàng đợi.
 
-#### **Bước 6: Dừng Tải xuống**
+---
 
-* Nếu muốn dừng quá trình tải, nhấn nút **"⏹️ Dừng Lại"**.
+## Cookie (cho video giới hạn tuổi hoặc cần đăng nhập)
 
-## **III. Các Tính năng Nâng cao**
+Bấm **Cookie** ở thanh trên cùng để mở dialog Cookie.
 
-Ở góc trên bên phải của cửa sổ, bạn sẽ thấy các nút chức năng nâng cao:
+Có 2 cách cung cấp cookie:
 
-* **Các nút ngôn ngữ (EN, VI, ZH, ...):** Nhấn để thay đổi ngôn ngữ giao diện ngay lập tức.
+**A — Paste từ extension trình duyệt** (khuyến nghị)
+1. Cài extension [Cookie-Exporter](https://chromewebstore.google.com/detail/cookie-exporter/fhnmmidekmgocpjdceeffppcodigillk) cho Chrome/Edge.
+2. Vào youtube.com khi đã đăng nhập, bấm icon extension, copy chuỗi JSON.
+3. Dán vào ô **nội dung**, tích **Bật**, bấm **Lưu**.
 
-* **Cài đặt Cookie:** Hữu ích khi bạn cần tải các video yêu cầu đăng nhập, video riêng tư hoặc bị giới hạn độ tuổi. Bạn có thể dùng tiện ích trình duyệt để lấy file cookie và nạp vào chương trình.
+**B — Chọn file**
+1. Bấm **Chọn file**, chọn `cookies.txt` (định dạng Netscape) hoặc file `.json`.
+2. Tích **Bật**, bấm **Lưu**.
 
-* **Cài đặt Proxy:** Sử dụng khi bạn muốn tải các video bị chặn ở khu vực địa lý của mình.
+App tự nhận diện JSON và chuyển sang Netscape ở bên trong.
 
-* **Cập nhật thư viện:** Nhấn nút này để chương trình tự động tải về phiên bản mới nhất của công cụ `yt-dlp`, giúp đảm bảo khả năng tương thích với các thay đổi của YouTube.
+> **Khi nào thực sự cần cookie:** video giới hạn độ tuổi, nội dung dành cho thành viên, lỗi "Sign in to confirm you're not a bot", hoặc tải từ playlist riêng tư của bạn.
 
-* **Mời tôi một ly cà phê ☕:** Nếu bạn thấy công cụ này hữu ích, hãy ủng hộ tác giả để có thêm động lực phát triển nhé!
+---
 
-Chúc bạn có những trải nghiệm tuyệt vời với công cụ!
+## Proxy (tuỳ chọn)
+
+Bấm **Proxy** ở thanh trên cùng để mở dialog Proxy.
+
+| Trường | Ghi chú |
+|---|---|
+| **Giao thức** | `http`, `https`, `socks4`, hoặc `socks5` |
+| **IP / Host** | Ví dụ: `127.0.0.1` hoặc `myproxy.example.com` |
+| **Port** | Bắt buộc |
+| **Username / Password** | Tuỳ chọn, chỉ điền khi proxy yêu cầu xác thực |
+
+Bấm **Kiểm tra Proxy** để verify trước khi lưu — nó sẽ thử kết nối Google qua proxy của bạn và hiện ✅ hoặc ❌.
+
+---
+
+## Nơi lưu file
+
+### File tải về
+Mặc định, file lưu vào folder `youtube_downloads/` cạnh `YouTubeDownloader.exe`. Đổi qua nút **Chọn** trong thẻ Thiết lập.
+
+Tên file theo template:
+
+- **Video:** `Tác giả - Tên video [VideoID] [720p].mp4`
+- **Audio:** `Tác giả - Tên video [VideoID].mp3`
+- **Thumbnail / Phụ đề:** cùng tên với phần đuôi `.jpg` hoặc `.<lang>.srt`
+
+Có VideoID trong dấu ngoặc vuông nên **2 video cùng tên cũng không bị ghi đè lên nhau**.
+
+### Dữ liệu app & cấu hình
+App giữ dữ liệu nội bộ tại:
+
+```
+%APPDATA%\YouTubeDownloaderStandalone\
+├── settings.json          ← ngôn ngữ, proxy, nội dung cookie, lần check yt-dlp cuối
+├── cookies.txt            ← cookies định dạng Netscape
+├── download_history.txt   ← ID các video tải trong phiên hiện tại (tự xoá khi mở app)
+├── yt-dlp.exe             ← engine tự tải về
+├── temp\                  ← file tạm khi đang tải
+└── temp_cache\            ← cache danh sách playlist/kênh đã mở rộng
+```
+
+> **Tránh tải trùng trong cùng 1 phiên:** file `download_history.txt` ghi nhớ tất cả video đã tải kể từ khi mở app. Nếu bạn lỡ add cùng 1 video 2 lần trong cùng phiên, lần 2 sẽ bị skip. File này **tự động bị xoá mỗi khi bạn khởi động app**, nên chỉ cần đóng-mở lại app là history trống — tải lại video thoải mái.
+
+---
+
+## Cập nhật yt-dlp thủ công
+
+App tự kiểm tra `yt-dlp` mới mỗi 24 giờ khi khởi động. Nếu nghi ngờ engine cũ (ví dụ YouTube vừa thay đổi), bấm **Cập nhật thư viện** trên thanh trên cùng để tải bản mới ngay lập tức.
+
+---
+
+## Đọc nhật ký (log)
+
+Mỗi dòng có timestamp `[HH:MM:SS]`. Log đã lọc bỏ những dòng tiến trình thông thường của yt-dlp, chỉ giữ thông tin hữu ích:
+
+- `--- Bắt đầu xử lý video: ...` — 1 worker đã bắt đầu xử lý 1 video.
+- `✅ Tải xuống thành công: ...` — xong rồi.
+- `[LỖI] ...` — có lỗi xảy ra; chi tiết kèm sau.
+- `[Tác vụ X] attempt 1/3 failed: ...` — yt-dlp báo lỗi; app sẽ thử lại tối đa 3 lần với khoảng nghỉ tăng dần (5s, 10s, 15s).
+
+---
+
+## Xử lý sự cố
+
+**"Sign in to confirm you're not a bot" / "Video unavailable"**
+→ Cấu hình cookie từ trình duyệt đã đăng nhập (xem mục Cookie ở trên).
+
+**HTTP 429 / Too Many Requests**
+→ YouTube đang giới hạn tốc độ IP của bạn. Đợi 10–30 phút, hoặc dùng proxy.
+
+**"Requested format is not available"**
+→ Bấm **Cập nhật thư viện** để làm mới `yt-dlp`. Nếu vẫn lỗi, thử đổi **Chất lượng** khác.
+
+**Log hiện "⏭️ BỎ QUA: video đã có trong download_history.txt"**
+→ Trong phiên hiện tại bạn đã tải video này rồi nên nó bị skip. Đóng và mở lại app — history sẽ tự reset và lần tải sau sẽ chạy lại.
+
+**Bấm Bắt đầu mà không có gì xảy ra**
+→ Đảm bảo hàng đợi không trống và đường dẫn **Thư mục lưu** hợp lệ (dùng nút **Chọn** cho an toàn).
+
+**Kẹt ở "Đang kiểm tra và cập nhật công cụ tải xuống…"**
+→ Internet đang chặn `github.com`, hoặc folder `%APPDATA%\YouTubeDownloaderStandalone\` bị chặn ghi. Thử chạy app dưới quyền admin 1 lần để fix permission.
+
+---
+
+## Ngôn ngữ
+
+Bấm vào bất kỳ nút ngôn ngữ nào (EN, VI, 中文, ES, AR, RU) ở thanh trên cùng. Lựa chọn của bạn sẽ được lưu vào `settings.json` và nhớ cho lần sau. Lần đầu chạy, app sẽ thử nhận diện ngôn ngữ hệ thống; nếu hệ thống không nằm trong 6 ngôn ngữ hỗ trợ, app sẽ dùng English.
+
+---
+
+## Hỗ trợ / Ủng hộ
+
+Nút **♥ Donate** ở thanh trên cùng mở 1 cửa sổ chứa thông tin ngân hàng. Nếu bạn thấy tool hữu ích, một chút ủng hộ sẽ giúp dự án sống tiếp. Cảm ơn bạn!
+
+Website tác giả: [duckmartians.info](https://duckmartians.info)

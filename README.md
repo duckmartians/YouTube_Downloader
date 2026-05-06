@@ -1,65 +1,239 @@
-# YouTube Downloader User Guide
-[![Tiếng Việt](https://img.shields.io/badge/Tiếng%20Việt-green)](README_vi.md) [![English](https://img.shields.io/badge/English-blue)](README.md) [![中文](https://img.shields.io/badge/中文-red)](README_zh.md) [![Español](https://img.shields.io/badge/Español-orange)](README_es.md) [![العربية](https://img.shields.io/badge/العربية-grey)](README_ar.md) [![Русский](https://img.shields.io/badge/Русский-yellow)](README_ru.md)
+# YouTube Downloader Pro
 
-[![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-%F0%9F%92%BB-blue?style=for-the-badge)](https://github.com/duckmartians/YouTube_Downloader/releases/latest) [![Download Here](https://img.shields.io/badge/⬇_Download-Here-success?style=for-the-badge)](https://github.com/duckmartians/YouTube_Downloader/releases/latest)
+**[English](README.md) · [Tiếng Việt](README_vi.md) · [中文](README_zh.md) · [Español](README_es.md) · [العربية](README_ar.md) · [Русский](README_ru.md)**
 
+A friendly desktop app to download YouTube videos, playlists, channels, and Shorts — with audio extraction, thumbnails, subtitles, and parallel downloads. Bundled `ffmpeg` and JavaScript runtime mean **you don't need to install anything else**.
 
-Welcome to [**`YouTube Downloader`**](https://github.com/duckmartians/YouTube_Downloader/releases/), a powerful and easy-to-use tool that helps you quickly and flexibly download videos, audio, playlists, or entire channels from YouTube.
+---
 
-## **I. Main Interface Overview**
+## Highlights
 
-The program's interface is divided into 4 main sections:
-<img width="1202" height="732" alt="image" src="https://github.com/user-attachments/assets/a3e0f463-ceb7-415c-9868-199d24931d14" />
+- Download single videos, full playlists, entire channels, or Shorts collections.
+- Save as **video MP4** (best / 1080p / 720p / 480p) or **audio MP3** (192 kbps).
+- Optionally save **thumbnail (JPG)** and **subtitles (SRT)** alongside.
+- Download up to **10 videos in parallel**.
+- **Preview a playlist** to pick exactly which videos to add to the queue.
+- **Retry failed videos** with one click.
+- **Export queue** or **export only failed videos** to CSV.
+- **Cookie** support (paste from a browser extension, or pick a file).
+- **Proxy** support (HTTP / HTTPS / SOCKS4 / SOCKS5, with optional auth).
+- Skips re-downloading videos already in your local history.
+- Available in **6 languages**: English, Tiếng Việt, 中文, Español, العربية, Русский.
+- **`yt-dlp` auto-updates** every 24 hours so YouTube changes don't break you.
 
-1.  **Download Setup:** This is where you add links, manage the download queue, and choose where to save your files.
-2.  **Options:** Here, you can customize the quality, format, and other content to be downloaded.
-3.  **Activity Log:** Displays notifications about the download process, allowing you to monitor the program's activities.
-4.  **Controls:** Contains the main buttons to start or stop the download process.
+---
 
-## **II. Step-by-Step Download Guide**
+## Quick Start
 
-Follow these simple steps to download the content you want:
+1. Run `YouTubeDownloader.exe`.
+2. Paste a YouTube link into the **Link** box and press **Enter** (or click **Add**).
+3. (Optional) Pick a quality, format, or extras from the **Options** card.
+4. Click **Start Download**.
 
-#### **Step 1: Add a Video/Playlist/Channel Link**
-* Copy the link of the YouTube video, playlist, or channel you want to download.
-* Paste the link into the **"Channel/Playlist/Video Link"** field.
-* Click the **"➕ Add"** button. The link will be added to the **"Queue"** table below.
-> **Tip:** You can add multiple links to the queue before starting the download.
+That's it. Files end up in the **Save folder** shown in the **Setup** card (default: a `youtube_downloads/` folder next to the app).
 
-#### **Step 2: Preview (Optional for Playlists/Channels)**
-* If you paste a link to a playlist or channel, you can click the **"🔍 Preview..."** button.
-* A new window will appear, listing all the videos in that playlist/channel.
-* You can select one or more specific videos from the list to add to the queue, instead of downloading the entire collection.
+---
 
-#### **Step 3: Select a Save Directory**
-* In the **"Save directory"** line, click the **"📂 Browse..."** button.
-* A window will open, allowing you to browse and select a folder on your computer where you want to save the downloaded files.
+## Interface Overview
 
-#### **Step 4: Customize Options (If Needed)**
-* **Quality:** Select the desired video resolution (e.g., 1080p, 720p).
-* **Limit:** If it's a playlist/channel, you can limit the number of videos to download (set to `0` to download all).
-* **Video Type:** Choose between "Regular Videos" and "Shorts".
-* **Concurrent downloads:** Select the number of videos to download simultaneously (this can speed up the process).
-* **Other Options:**
-  * **🎵 Audio Only:** Downloads only the audio file (MP3).
-  * **⏩ Skip Video & Audio:** Downloads only auxiliary content like thumbnails or subtitles.
-  * **🖼️ Download Thumbnail:** Downloads the video's thumbnail image (in .jpg format).
-  * **📝 Download Subtitles:** Downloads the subtitle file (if available).
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│  EN  VI  中文  ES  AR  RU      [Update Library] [Cookies] [Proxy] [♥]   │  ← Top bar
+├──────────────────────────────────┬──────────────────────────────────────┤
+│  SETUP                           │  QUEUE          [Export] [Errors] [×]│
+│  Link: [______________] Add  🔍  │  ┌────────────────────────────────┐ │
+│  Save: [______________] 📂        │  │ # │ Title │ Status │ Progress │ │
+│                                  │  │ 1 │ ...   │ ...    │ ...      │ │
+│  OPTIONS                         │  │ 2 │ ...   │ ...    │ ...      │ │
+│  Quality:  [Best ▾]  Limit: [0]  │  └────────────────────────────────┘ │
+│  Type:     [Regular ▾] Concurrent│                                      │
+│  [Media] [Audio] [Thumb] [Subs]  │  LOG                                 │
+│                                  │  [09:00:01] ...                      │
+│  CONTROLS                        │  [09:00:02] ...                      │
+│  Status: Ready                   │                                      │
+│  ████████████░░░░░░░░░ 60%       │                                      │
+│  [Start] [Stop] [Retry Failed]   │                                      │
+└──────────────────────────────────┴──────────────────────────────────────┘
+```
 
-#### **Step 5: Start Downloading**
-* Once everything is set up, click the **"🚀 Start Download"** button in the **Controls** section.
-* The download process will begin. You can monitor the progress of each video in the "Progress" column and see detailed messages in the "Activity Log".
+The window has **two main columns**: the **left column** is for setup, options, and controls; the **right column** shows your queue and the log.
 
-#### **Step 6: Stop Downloading**
-* If you want to stop the process, click the **"⏹️ Stop"** button.
+---
 
-## **III. Advanced Features**
+## Detailed Usage
 
-In the top-right corner of the window, you'll find advanced function buttons:
-* **Language Buttons (EN, VI, ZH, ...):** Click to change the interface language instantly.
-* **Cookie Settings:** Useful for downloading videos that require a login, are private, or are age-restricted. You can use a browser extension to get the cookie file and load it into the program.
-* **Proxy Settings:** Use this when you want to download videos that are blocked in your geographical region.
-* **Update Library:** Click this button to have the program automatically download the latest version of the `yt-dlp` tool. This ensures better compatibility with YouTube's changes.
-* **Buy me a coffee ☕:** If you find this tool helpful, please support the author to provide more motivation for development!
+### 1. Adding videos to the queue
 
-Enjoy using the tool!
+You can add a queue item by:
+
+- Pasting a **single video link** (`https://www.youtube.com/watch?v=...`) and pressing **Enter** or clicking **Add**.
+- Pasting a **playlist link** (`...?list=...`) — the app expands it into individual videos.
+- Pasting a **channel link** (`youtube.com/@channelname`) — the app fetches both regular videos **and** Shorts and caches them.
+- Clicking **Preview** (🔍) to open a dialog that lists every video in a playlist/channel; tick the ones you want and click OK.
+
+Once added, items appear in the **Queue** table on the right with status `⏳ Pending`.
+
+> **Tip — playlists and channels are cached.** When you paste a channel link, the app downloads the list of videos once and saves it locally. You can then change **Limit** or switch between **Regular / Shorts** and the queue updates instantly without re-fetching.
+
+### 2. Choosing what to download (Options card)
+
+| Toggle | What it does |
+|---|---|
+| **Download Media** (on by default) | Save the video as MP4 |
+| **Audio Only** | Save the audio only as MP3, 192 kbps |
+| **Thumbnail** | Save the cover image as JPG |
+| **Subtitles** | Save subtitles as SRT (auto-picks the best language available) |
+
+**Download Media** and **Audio Only** are mutually exclusive — turning one on turns the other off.
+
+If you turn **both** off, the app skips the main download but still saves Thumbnail/Subtitles if those are on. This is useful if you only want artwork or captions.
+
+| Other option | Range / Values | Notes |
+|---|---|---|
+| **Quality** | Best, 1080p, 720p, 480p | Disabled in Audio mode |
+| **Limit** | 0–9999 | `0` = no limit. Only applies to playlists/channels. |
+| **Video Type** | Regular / Shorts | Only applies to playlists/channels. |
+| **Concurrent** | 1–10 | How many videos to download at the same time |
+
+### 3. Starting and monitoring
+
+Click **Start Download**. The status bar shows overall progress; each row in the queue has its own progress bar. Click **Stop** at any time — a confirmation dialog appears, then all running downloads are cancelled.
+
+When everything finishes, the status switches to **All complete**.
+
+### 4. Retry failed videos
+
+If some rows show `❌ Error`, click **Retry Failed**. The queue is rebuilt from only the failed rows and download starts automatically. Successful videos are kept out of the retry to avoid re-downloading.
+
+### 5. Export queue or errors
+
+- **Export** saves the entire queue (Title, URL, Status) to a `.csv` file.
+- **Export Errors** saves only the failed rows. Useful for sharing a problem list, or saving them to retry later.
+
+Both files use UTF-8 with BOM so they open correctly in Excel.
+
+### 6. Preview a playlist or channel before adding
+
+1. Paste a playlist or channel link into **Link**.
+2. Click **Preview**. A new window opens listing every video.
+3. Tick the videos you want.
+4. Click **OK**. They're added to the queue.
+
+---
+
+## Cookies (for age-restricted or sign-in-required videos)
+
+Click **Cookies** in the top bar to open the Cookie dialog.
+
+You have two ways to provide cookies:
+
+**A — Paste from a browser extension** (recommended)
+1. Install the [Cookie-Exporter](https://chromewebstore.google.com/detail/cookie-exporter/fhnmmidekmgocpjdceeffppcodigillk) extension in Chrome/Edge.
+2. Visit youtube.com while signed in, click the extension, copy the JSON.
+3. Paste into the **content** box, tick **Enable**, click **Save**.
+
+**B — Pick a file**
+1. Click **Browse**, pick a `cookies.txt` (Netscape format) or a `.json` file.
+2. Tick **Enable**, click **Save**.
+
+The app auto-detects JSON and converts to Netscape format internally.
+
+> **When you actually need cookies:** age-restricted videos, members-only content, "Sign in to confirm you're not a bot" errors, or downloading from your private playlists.
+
+---
+
+## Proxy (optional)
+
+Click **Proxy** in the top bar to open the Proxy dialog.
+
+| Field | Notes |
+|---|---|
+| **Protocol** | `http`, `https`, `socks4`, or `socks5` |
+| **IP / Host** | e.g., `127.0.0.1` or `myproxy.example.com` |
+| **Port** | Required |
+| **Username / Password** | Optional, only if your proxy needs auth |
+
+Click **Check Proxy** to verify connectivity before saving — it tries to reach Google through your proxy and shows ✅ or ❌.
+
+---
+
+## Where files are saved
+
+### Downloaded media
+By default, files go to a `youtube_downloads/` folder next to `YouTubeDownloader.exe`. Change it with **Browse** in the Setup card.
+
+Filenames follow these templates:
+
+- **Video:** `Uploader - Title [VideoID] [720p].mp4`
+- **Audio:** `Uploader - Title [VideoID].mp3`
+- **Thumbnail / Subtitle:** same prefix, with `.jpg` or `.<lang>.srt`
+
+The video ID in brackets means **two videos with the same title won't overwrite each other**.
+
+### App data and configuration
+The app keeps internal data in:
+
+```
+%APPDATA%\YouTubeDownloaderStandalone\
+├── settings.json          ← language, proxy, cookie content, last yt-dlp check
+├── cookies.txt            ← cookies in Netscape format
+├── download_history.txt   ← IDs of videos downloaded in the current session (auto-cleared on app start)
+├── yt-dlp.exe             ← auto-downloaded engine
+├── temp\                  ← temporary files during download
+└── temp_cache\            ← cached playlist/channel listings
+```
+
+> **Avoiding duplicate downloads in the same session:** the `download_history.txt` file remembers everything downloaded since the app was opened. If you accidentally add the same video twice in one session, the second copy is skipped. The file is **automatically deleted every time you launch the app**, so closing and reopening always gives you a clean slate — videos can be re-downloaded freely.
+
+---
+
+## Update yt-dlp manually
+
+The app checks for a new `yt-dlp` once every 24 hours when you start it. If you suspect the engine is out of date (e.g., new YouTube changes), click **Update Library** in the top bar to force-refresh immediately.
+
+---
+
+## Reading the log
+
+Each line is timestamped `[HH:MM:SS]`. The log filters out routine yt-dlp progress chatter and keeps only useful info:
+
+- `--- Processing video: ...` — a worker started a video.
+- `✅ Download successful: ...` — done.
+- `[ERROR] ...` — something went wrong; the message contains the reason.
+- `[Task X] attempt 1/3 failed: ...` — yt-dlp returned an error; the app will retry up to 3 times with growing delays (5s, 10s, 15s).
+
+---
+
+## Troubleshooting
+
+**"Sign in to confirm you're not a bot" / "Video unavailable"**
+→ Add cookies from a signed-in browser session (see Cookies above).
+
+**HTTP 429 / Too Many Requests**
+→ YouTube is rate-limiting your IP. Wait 10–30 minutes, or use a proxy.
+
+**"Requested format is not available"**
+→ Click **Update Library** to refresh `yt-dlp`. If it persists, try a different **Quality** setting.
+
+**Log shows "⏭️ SKIPPED: video already in download_history.txt"**
+→ Within the current session you've already downloaded this video, so it was skipped. Close and reopen the app — the history resets automatically and the download will run again.
+
+**Nothing happens when I click Start**
+→ Make sure the queue isn't empty and the **Save folder** path is valid (the **Browse** button helps).
+
+**Stuck on "Checking and updating download tool…"**
+→ Either your internet is blocked from `github.com`, or `%APPDATA%\YouTubeDownloaderStandalone\` is read-only. Try running once as administrator to set permissions.
+
+---
+
+## Languages
+
+Click any of the language buttons (EN, VI, 中文, ES, AR, RU) in the top bar. Your choice is saved to `settings.json` and will be remembered next time. The first time you run the app, it tries to detect your system language; if your system isn't one of the 6 supported, it falls back to English.
+
+---
+
+## Support / Donate
+
+The **♥ Donate** button in the top bar opens a window with bank/account info. If you find this tool useful, a small contribution helps keep the project alive. Thank you!
+
+Author website: [duckmartians.info](https://duckmartians.info)
